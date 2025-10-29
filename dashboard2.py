@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 # --- CONFIGURATION (UPDATED for Intraday Speed) ---
 # ⚠️ IMPORTANT: Replace with your actual credentials
 API_KEY = st.secrets["gqmhg28m3qd411ri"]
-API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"]
+API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"] 
 ACCESS_TOKEN = st.secrets["CLJmrDUz5LL7F0hxsXrNRR0sEjKeRO9g"]
 REFRESH_INTERVAL_SECONDS = 15
 
