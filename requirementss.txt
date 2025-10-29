@@ -1,0 +1,6 @@
+streamlit
+pandas
+pandas-ta
+kiteconnect
+numpy
+plotly
