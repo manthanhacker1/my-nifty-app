@@ -9,7 +9,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # =========================================================================
-# --- 💡 START: KEYERROR FIX 💡 ---
+# --- 💡 START: SAHI WALA SECRET CODE 💡 ---
 # =========================================================================
 # --- CONFIGURATION (UPDATED for Intraday Speed) ---
 # Secrets ko unke NAAM se call karna hai, VALUE se nahi
@@ -18,7 +18,7 @@ API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"]
 ACCESS_TOKEN = st.secrets["CLJmrDUz5LL7F0hxsXrNRR0sEjKeRO9g"]
 REFRESH_INTERVAL_SECONDS = 15
 # =========================================================================
-# --- 💡 END: KEYERROR FIX 💡 ---
+# --- 💡 END: SAHI WALA SECRET CODE 💡 ---
 # =========================================================================
 
 # --- QUADRANT WEIGHTS (NOW DYNAMIC) ---
@@ -555,13 +555,11 @@ while True:
                             side='left'
                         ),
                         # =========================================================================
-                        # --- 💡 START: SYNTAXERROR FIX 💡 ---
+                        # --- 💡 START: SYNTAXERROR FIX (Already applied) 💡 ---
                         # =========================================================================
-                        # Aapke code mein yahaan 'yaxis2' ke andar ek extra ')' tha.
-                        # Pehle yeh tha: tickfont=dict(color='#BFBFBF')),
                         yaxis2=dict(
                             title=dict(text='Nifty Live Price', font=dict(color='#BFBFBF')),
-                            tickfont=dict(color='#BFBFBF'), # <-- Yahaan se extra ')' hata diya
+                            tickfont=dict(color='#BFBFBF'), 
                             overlaying='y',
                             side='right'
                         )
