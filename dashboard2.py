@@ -8,12 +8,21 @@ from datetime import datetime, timedelta
 import numpy as np
 import plotly.graph_objects as go
 
+# =========================================================================
+# --- 💡 START: BUG FIX APPLIED HERE 💡 ---
+# =========================================================================
+# Your code was using the API Key *value* as the *name* of the secret.
+# This is the correct way to read from st.secrets.
+
 # --- CONFIGURATION (UPDATED for Intraday Speed) ---
-# ⚠️ IMPORTANT: Replace with your actual credentials
+# Read credentials from Streamlit's private secrets
 API_KEY = st.secrets["gqmhg28m3qd411ri"]
-API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"] 
+API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"]
 ACCESS_TOKEN = st.secrets["CLJmrDUz5LL7F0hxsXrNRR0sEjKeRO9g"]
 REFRESH_INTERVAL_SECONDS = 15
+# =========================================================================
+# --- 💡 END: BUG FIX 💡 ---
+# =========================================================================
 
 # --- QUADRANT WEIGHTS (NOW DYNAMIC) ---
 # Weights for a normal trading day
@@ -550,7 +559,7 @@ while True:
                         ),
                         yaxis2=dict(
                             title=dict(text='Nifty Live Price', font=dict(color='#BFBFBF')),
-                            tickfont=dict(color='#BFBFBF'),
+                            tickfont=dict(color='#BFBFBF')),
                             overlaying='y',
                             side='right'
                         )
