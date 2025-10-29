@@ -13,9 +13,10 @@ import plotly.graph_objects as go
 # =========================================================================
 # --- CONFIGURATION (UPDATED for Intraday Speed) ---
 # Secrets ko unke NAAM se call karna hai, VALUE se nahi
-API_KEY = st.secrets["gqmhg28m3qd411ri"]
-API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"]
-ACCESS_TOKEN = st.secrets["CLJmrDUz5LL7F0hxsXrNRR0sEjKeRO9g"]
+# YEH SAHI HAI, PASTE KARO
+API_KEY = st.secrets["API_KEY"]
+API_SECRET = st.secrets["API_SECRET"]
+ACCESS_TOKEN = st.secrets["ACCESS_TOKEN"]
 REFRESH_INTERVAL_SECONDS = 15
 # =========================================================================
 # --- 💡 END: SAHI WALA SECRET CODE 💡 ---
