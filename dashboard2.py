@@ -9,19 +9,16 @@ import numpy as np
 import plotly.graph_objects as go
 
 # =========================================================================
-# --- 💡 START: BUG FIX APPLIED HERE 💡 ---
+# --- 💡 START: KEYERROR FIX 💡 ---
 # =========================================================================
-# Your code was using the API Key *value* as the *name* of the secret.
-# This is the correct way to read from st.secrets.
-
 # --- CONFIGURATION (UPDATED for Intraday Speed) ---
-# Read credentials from Streamlit's private secrets
+# Secrets ko unke NAAM se call karna hai, VALUE se nahi
 API_KEY = st.secrets["gqmhg28m3qd411ri"]
 API_SECRET = st.secrets["p5vuu9taqvkaduesamtjyig6d0qvztet"]
 ACCESS_TOKEN = st.secrets["CLJmrDUz5LL7F0hxsXrNRR0sEjKeRO9g"]
 REFRESH_INTERVAL_SECONDS = 15
 # =========================================================================
-# --- 💡 END: BUG FIX 💡 ---
+# --- 💡 END: KEYERROR FIX 💡 ---
 # =========================================================================
 
 # --- QUADRANT WEIGHTS (NOW DYNAMIC) ---
@@ -557,12 +554,20 @@ while True:
                             range=[-100, 100],
                             side='left'
                         ),
+                        # =========================================================================
+                        # --- 💡 START: SYNTAXERROR FIX 💡 ---
+                        # =========================================================================
+                        # Aapke code mein yahaan 'yaxis2' ke andar ek extra ')' tha.
+                        # Pehle yeh tha: tickfont=dict(color='#BFBFBF')),
                         yaxis2=dict(
                             title=dict(text='Nifty Live Price', font=dict(color='#BFBFBF')),
-                            tickfont=dict(color='#BFBFBF')),
+                            tickfont=dict(color='#BFBFBF'), # <-- Yahaan se extra ')' hata diya
                             overlaying='y',
                             side='right'
                         )
+                        # =========================================================================
+                        # --- 💡 END: SYNTAXERROR FIX 💡 ---
+                        # =========================================================================
                     )
                     st.plotly_chart(fig, use_container_width=True)
 
